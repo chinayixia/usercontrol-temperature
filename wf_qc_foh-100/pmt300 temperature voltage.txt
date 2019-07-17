@@ -1,0 +1,278 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
+using System.Net.Sockets;
+using System.Threading;
+using System.Text.RegularExpressions;
+using System.IO;
+
+namespace wf_qc_foh_100
+{
+    public partial class ONU : Form
+    {
+
+        List<string> expressions = new List<string>();  //save config
+        //SERIAL
+        public byte[] a = new byte[13];
+        //  private SerialPort com = new SerialPort();
+        public USB usb;
+        private Thread thread;
+        public ONU()
+        {
+            InitializeComponent();
+            //SERIAL
+            usb = new USB();
+            Init();
+        }
+
+        #region  serial
+        //initial serial port
+        private void Init()
+        {
+            try
+            {
+                List<string> list = new List<string>();
+                string[] ports = USB.GetPorts(); //SerialPort.GetPortNames();//
+
+                PortcomboBox.Items.Clear();
+                for (int i = 0; i < ports.Length; i++)
+                {
+                    PortcomboBox.Items.Add(ports[i]);
+                }
+                if (ports.Length > 0)
+                {
+                    PortcomboBox.SelectedIndex = ports.Length - 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void PortSearch_Click(object sender, EventArgs e)
+        {
+            Init();
+        }
+
+        //force quit form 
+        protected override void WndProc(ref Message msg)
+        {
+            const int WM_SYSCOMMAND = 0x0112;
+            const int SC_CLOSE = 0xF060;
+
+            if (msg.Msg == WM_SYSCOMMAND && ((int)msg.WParam == SC_CLOSE))
+            {
+                // 点击winform右上关闭按钮 
+                usb.CloseCom();
+                isExit = true;
+            }
+            base.WndProc(ref msg);
+        }
+
+        //open event 
+        private Boolean isOpen = false;
+        private void PortOpen_Click(object sender, EventArgs e)
+        {
+            if (!isOpen)
+            {
+
+                lblStatus.Text = "The device is active";
+
+                //SendCommand.Enabled = true;  //button sendcommand enable
+                //btn_switchGEPON.Enabled = true;
+                //btn_Power.Enabled = true;
+
+                PortOpen.Text = "Close";
+                String comName = PortcomboBox.SelectedItem.ToString();
+                Boolean isOpenSuccess = usb.SetCom(PortcomboBox.SelectedItem.ToString());
+
+                //Timer tick
+                System.Windows.Forms.Timer myTimer = new System.Windows.Forms.Timer();
+                myTimer.Tick += new EventHandler(timer1_Tick);
+                myTimer.Enabled = true;
+                myTimer.Interval = 10000;
+                myTimer.Start();
+
+                if (isOpenSuccess)
+                {
+                    isOpen = true;
+                }
+                else
+                {
+                    isOpen = false;
+                    PortOpen.Text = "Open";
+                    lblStatus.Text = "Could not read any response";
+                }
+            }
+            else
+            {
+                usb.CloseCom();
+                PortOpen.Text = "Open";
+                isOpen = false;
+
+            }
+        }
+        Boolean isExit = false;
+
+        private void SendCommand_Click(object sender, EventArgs e)
+        {
+            vertest();
+        }
+
+        //PMT-300温度、电压读取：
+        string pmt300_state = "system,state";
+
+        private void vertest()
+        {
+
+
+            if (isOpen)
+            {
+                try
+                {
+                    //usb.SendData(tb_send.Text);
+                    usb.SendData(pmt300_state);
+                    thread = new Thread(new ThreadStart(GetData));
+                    thread = new Thread(new ThreadStart(GetData));
+                    thread = new Thread(new ThreadStart(GetData));
+                    thread.Start();
+
+                }
+                catch
+                {
+                    MessageBox.Show("串口数据写入错误", "错误");
+                    usb.CloseCom();
+                }
+            }
+        }
+
+
+        public void GetData()
+        {
+            String msg = "";
+
+            Thread.Sleep(500);
+
+
+            int i = 0;
+
+            msg = usb.ReadData();
+
+
+            if (msg.Contains("sys_power_flg"))
+            {
+                Action<int> action = (data) =>
+                {
+                    int start0 = msg.IndexOf("mcu_temperate");
+                    int length0 = " = 36.71".Length;
+                    String tmpValue0 = msg.Substring(start0 + 15, length0).Trim();
+
+                    int start1 = msg.IndexOf("battary_volatge ");
+                    int length1 = " = 4.30".Length;
+                    String tmpValue1 = msg.Substring(start1 + 18, length1).Trim();
+
+                    //int start2 = msg.IndexOf("PAM3001.fpga: ");
+                    //int length2 = "19042400    ".Length;
+                    //String tmpValue2 = msg.Substring(start2 + 13, length2).Trim();
+
+                    ReceivedTextBox.Text += tmpValue0+ "\r\n";
+
+
+                    lbl_mcu_temperate.Text = "mcu_temperate:" + tmpValue0;
+                    lbl_battary_volatge.Text = "battary_volatge:" + tmpValue1;
+
+                
+
+                    String responseoutput = String.Empty;
+                    responseoutput = msg;
+                    //save info log
+                    StreamWriter file = new StreamWriter("usblog.txt", true);
+                    file.WriteLine(DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss-fff") + "        " + responseoutput);
+                    file.Close();
+
+                };
+                Invoke(action, i);
+                i++;
+
+                //  }
+                Thread.Sleep(1000);
+                //    }
+            }
+            //else
+            //{
+            //    try
+            //    {
+
+            //        vertest_again();
+            //    }
+            //    catch {
+            //        MessageBox.Show("123123");
+            //    }
+
+            //}
+        }
+
+
+
+        #endregion
+
+        private void BtnView_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string LogPath = System.Environment.CurrentDirectory + "//usblog.txt";
+                System.Diagnostics.Process.Start(LogPath);
+            }
+            catch
+            {
+                MessageBox.Show("未找到 usblog.txt");
+            }
+        }
+
+        private void LblTime_Click(object sender, EventArgs e)
+        {
+            this.lblTime.Text = DateTime.Now.ToString();
+        }
+
+        private void ONU_Load(object sender, EventArgs e)
+        {
+            //log path
+            tbxView.Text = System.Environment.CurrentDirectory + "\\usblog.txt";
+
+        
+        }
+
+        int count = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.lblTime.Text = DateTime.Now.ToString();
+            //Thread.Sleep(10000);
+            if (isOpen)
+            {
+                try
+                {
+                    vertest();
+                   
+                 
+                    count++;
+                }
+                catch
+                {
+                    MessageBox.Show("请检查串口连接！");
+                }
+            }
+          
+           
+            label1.Text = "Send Count:" + count.ToString();
+
+        }
+    }
+}

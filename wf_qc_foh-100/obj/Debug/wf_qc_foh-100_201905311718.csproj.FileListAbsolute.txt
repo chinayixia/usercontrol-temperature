@@ -1,0 +1,49 @@
+C:\Users\Administrator\Desktop\FOH-100 CMD\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100.exe
+C:\Users\Administrator\Desktop\FOH-100 CMD\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100.pdb
+C:\Users\Administrator\Desktop\FOH-100 CMD\wf_qc_foh-100_201905301745\wf_qc_foh-100\bin\Debug\wf_qc_foh-100.exe
+C:\Users\Administrator\Desktop\FOH-100 CMD\wf_qc_foh-100_201905301745\wf_qc_foh-100\bin\Debug\wf_qc_foh-100.pdb
+C:\Users\Administrator\Desktop\FOH-100 CMD\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100_201905311718.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\FOH-100 CMD\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh_100.ABOUT.resources
+C:\Users\Administrator\Desktop\FOH-100 CMD\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh_100.Form1.resources
+C:\Users\Administrator\Desktop\FOH-100 CMD\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh_100.Properties.Resources.resources
+C:\Users\Administrator\Desktop\FOH-100 CMD\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100_201905311718.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\FOH-100\qc demo _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\bin\Debug\wf_qc_foh-100.exe
+C:\Users\Administrator\Desktop\FOH-100\qc demo _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\bin\Debug\wf_qc_foh-100.pdb
+C:\Users\Administrator\Desktop\FOH-100\qc demo _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100_201905311718.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\FOH-100\qc demo _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh_100.ABOUT.resources
+C:\Users\Administrator\Desktop\FOH-100\qc demo _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh_100.Form1.resources
+C:\Users\Administrator\Desktop\FOH-100\qc demo _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh_100.Properties.Resources.resources
+C:\Users\Administrator\Desktop\FOH-100\qc demo _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100_201905311718.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\FOH-100\qc demo _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100_201905311718.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\FOH-100\qc demo _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100.exe
+C:\Users\Administrator\Desktop\FOH-100\qc demo _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100.pdb
+C:\Users\Administrator\Desktop\FOH-100\qc demo _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh_100.ONU.resources
+E:\LILEI\c++++\程序\FOH-100\qc demo+usb timer _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\bin\Debug\wf_qc_foh-100.exe
+E:\LILEI\c++++\程序\FOH-100\qc demo+usb timer _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\bin\Debug\wf_qc_foh-100.pdb
+E:\LILEI\c++++\程序\FOH-100\qc demo+usb timer _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100_201905311718.csprojAssemblyReference.cache
+E:\LILEI\c++++\程序\FOH-100\qc demo+usb timer _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh_100.ABOUT.resources
+E:\LILEI\c++++\程序\FOH-100\qc demo+usb timer _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh_100.Form1.resources
+E:\LILEI\c++++\程序\FOH-100\qc demo+usb timer _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh_100.ONU.resources
+E:\LILEI\c++++\程序\FOH-100\qc demo+usb timer _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh_100.Properties.Resources.resources
+E:\LILEI\c++++\程序\FOH-100\qc demo+usb timer _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100_201905311718.csproj.GenerateResource.cache
+E:\LILEI\c++++\程序\FOH-100\qc demo+usb timer _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100_201905311718.csproj.CoreCompileInputs.cache
+E:\LILEI\c++++\程序\FOH-100\qc demo+usb timer _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100.exe
+E:\LILEI\c++++\程序\FOH-100\qc demo+usb timer _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100.pdb
+E:\LILEI\c++++\程序\FOH-100\qc demo+usb timer _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100_201905311718.csproj.CopyComplete
+E:\LILEI\c++++\程序\FOH-100\qc demo+usb timer _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh_100.FOHW.resources
+E:\LILEI\c++++\程序\FOH-100\qc demo+usb timer _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\bin\Debug\LGraph.dll
+E:\LILEI\c++++\程序\FOH-100\qc demo+usb timer _20190627\wf_qc_foh-100_201905301745\wf_qc_foh-100\bin\Debug\LGraph.pdb
+C:\Users\Administrator\Desktop\wf_qc_foh-100_201905301745\wf_qc_foh-100\bin\Debug\wf_qc_foh-100.exe
+C:\Users\Administrator\Desktop\wf_qc_foh-100_201905301745\wf_qc_foh-100\bin\Debug\wf_qc_foh-100.pdb
+C:\Users\Administrator\Desktop\wf_qc_foh-100_201905301745\wf_qc_foh-100\bin\Debug\LGraph.pdb
+C:\Users\Administrator\Desktop\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100_201905311718.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh_100.ABOUT.resources
+C:\Users\Administrator\Desktop\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh_100.FOHW.resources
+C:\Users\Administrator\Desktop\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh_100.Form1.resources
+C:\Users\Administrator\Desktop\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh_100.ONU.resources
+C:\Users\Administrator\Desktop\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh_100.Properties.Resources.resources
+C:\Users\Administrator\Desktop\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100_201905311718.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100_201905311718.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100_201905311718.csproj.CopyComplete
+C:\Users\Administrator\Desktop\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100.exe
+C:\Users\Administrator\Desktop\wf_qc_foh-100_201905301745\wf_qc_foh-100\obj\Debug\wf_qc_foh-100.pdb
